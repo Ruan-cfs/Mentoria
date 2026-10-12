@@ -29,7 +29,7 @@ def classificar_candidato():
         return 3
 
 def main():
-    
+    print(Avaliar_candidato())
     print(classificar_candidato())
 
 main()
