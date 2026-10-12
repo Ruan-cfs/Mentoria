@@ -29,7 +29,11 @@ def classificar_candidato():
         return 2
     else:
         return 3
-    
+
+def main():
+    classificar_candidato()
+
+main()
 
      
 
