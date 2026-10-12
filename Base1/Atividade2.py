@@ -4,7 +4,7 @@ def Avaliar_candidato(nota_teste,nota_entrevista,experiencia,idade):
         mensagem = "Dados invalidos"
     elif nota_teste < 40 or nota_entrevista < 50:
         mensagem = "Reprovacao direta"
-    elif nota_teste >= 80 and nota_entrevista >= 70 and experiencia > 6:
+    elif nota_teste >= 80 and nota_entrevista >= 70 and experiencia >= 6:
         mensagem = "Aprovado direto"
     elif (nota_entrevista + nota_teste) >= 130 and nota_entrevista > 60:
         mensagem = "Segunda etapa"
