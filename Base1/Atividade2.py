@@ -1,6 +1,6 @@
 def Avaliar_candidato(nota_teste,nota_entrevista,experiencia,idade):
 
-    if nota_teste or nota_entrevista < 0 and experiencia < 0 and idade < 16:
+    if (nota_teste or nota_entrevista <= 0) and (experiencia <= 0) and (idade < 16):
         mensagem = "Dados invalidos"
     elif nota_teste < 40 or nota_entrevista < 50:
         mensagem = "Reprovacao direta"
