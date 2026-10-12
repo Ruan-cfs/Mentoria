@@ -13,7 +13,7 @@ def Avaliar_candidato(nota_teste,nota_entrevista,experiencia,idade):
 
     return mensagem
 
-not_teste,nota_entrevista,experi,idade = map( int(input().split()))
+not_teste,nota_entrevista,experi,idade = map( int, input().split())
 
 Avaliar_candidato(not_teste,nota_entrevista,experi,idade)
 
