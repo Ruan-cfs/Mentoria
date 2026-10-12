@@ -21,6 +21,15 @@ def classificar_candidato():
 
     if Avaliar_candidato() == "Dados invalidos":
         return -1
+    elif Avaliar_candidato() == "Reprovacao direta":
+        return 0
+    elif Avaliar_candidato() == "Aprovado direto":
+        return 1
+    elif Avaliar_candidato() == "Segunda etapa":
+        return 2
+    else:
+        return 3
+    
 
      
 
