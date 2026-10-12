@@ -18,8 +18,6 @@ def classificar_candidato(not_teste,nota_entrevista,experi,idade):
 
     mensagem = Avaliar_candidato(not_teste,nota_entrevista,experi,idade)
 
-    print(mensagem)
-
     if mensagem == "Dados invalidos":
         return -1
     elif mensagem == "Reprovacao direta":
