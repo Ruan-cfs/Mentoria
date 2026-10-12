@@ -17,6 +17,8 @@ def Avaliar_candidato(nota_teste,nota_entrevista,experiencia,idade):
 def classificar_candidato():
     not_teste,nota_entrevista,experi,idade = map( int, input().split())
 
+    print(Avaliar_candidato(not_teste,nota_entrevista,experi,idade))
+
     if Avaliar_candidato(not_teste,nota_entrevista,experi,idade) == "Dados invalidos":
         return -1
     elif Avaliar_candidato(not_teste,nota_entrevista,experi,idade) == "Reprovacao direta":
@@ -28,8 +30,10 @@ def classificar_candidato():
     else:
         return 3
 
+    
+
 def main():
-    print(Avaliar_candidato())
+    
     print(classificar_candidato())
 
 main()
