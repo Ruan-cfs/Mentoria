@@ -1,6 +1,6 @@
 def Avaliar_candidato(nota_teste,nota_entrevista,experiencia,idade):
 
-    if (nota_teste or nota_entrevista <= 0) and (experiencia <= 0) and (idade < 16):
+    if (nota_teste < 0 or nota_teste > 100 or nota_entrevista < 0 or nota_entrevista > 100) and (experiencia <= 0) and (idade < 16):
         mensagem = "Dados invalidos"
     elif nota_teste < 40 or nota_entrevista < 50:
         mensagem = "Reprovacao direta"
@@ -14,27 +14,30 @@ def Avaliar_candidato(nota_teste,nota_entrevista,experiencia,idade):
     return mensagem
 
 
-def classificar_candidato():
-    not_teste,nota_entrevista,experi,idade = map( int, input().split())
+def classificar_candidato(not_teste,nota_entrevista,experi,idade):
 
-    print(Avaliar_candidato(not_teste,nota_entrevista,experi,idade))
+    mensagem = Avaliar_candidato(not_teste,nota_entrevista,experi,idade)
 
-    if Avaliar_candidato(not_teste,nota_entrevista,experi,idade) == "Dados invalidos":
+    print(mensagem)
+
+    if mensagem == "Dados invalidos":
         return -1
-    elif Avaliar_candidato(not_teste,nota_entrevista,experi,idade) == "Reprovacao direta":
+    elif mensagem == "Reprovacao direta":
         return 0
-    elif Avaliar_candidato(not_teste,nota_entrevista,experi,idade) == "Aprovado direto":
-        return 1
-    elif Avaliar_candidato(not_teste,nota_entrevista,experi,idade) == "Segunda etapa":
+    elif mensagem == "Aprovado direto":
+        return 3
+    elif mensagem == "Segunda etapa":
         return 2
     else:
-        return 3
+        return 1
 
     
 
 def main():
+    not_teste,nota_entrevista,experi,idade = map( int, input().split())
     
-    print(classificar_candidato())
+    print(Avaliar_candidato(not_teste,nota_entrevista,experi,idade))
+    print(classificar_candidato(not_teste,nota_entrevista,experi,idade))
 
 main()
 
