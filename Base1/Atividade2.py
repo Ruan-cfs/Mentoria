@@ -19,6 +19,9 @@ Avaliar_candidato(not_teste,nota_entrevista,experi,idade)
 
 def classificar_candidato():
 
+    if Avaliar_candidato() == "Dados invalidos":
+        return -1
+
      
 
 
